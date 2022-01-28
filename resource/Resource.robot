@@ -29,5 +29,5 @@ Clicar no botão Pesquisar
     Click Element                       ${BUTTOM_SEARCH}
     Wait until element is visible       css:span[title="Resultados para "]
     Element Text Should Be    //*[@id="__next"]/div/main/section[4]/div[1]/div/h1    ${PESQUISA}
-    # Submit form
-    # Title Should Be    ${PESQUISA} - Pesquisa Googdle
+
+Conferir se o produto "${PESQUISA}" foi listado no site
