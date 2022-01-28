@@ -10,7 +10,7 @@ Caso de teste 01: Pesquisar produtos existentes
     Acessar a página home do site
     Digitar o nome "${PESQUISA}" a ser pesquisado
     Clicar no botão Pesquisar
-    # Conferir se o produto "${PESQUISA}" foi listado no site
+    Conferir se o produto "${PESQUISA}" foi listado no site
 #
 # Caso de teste 02: Pesquisar produtos não existentes
 #     Acessar a página home do site
