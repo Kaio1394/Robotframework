@@ -30,4 +30,4 @@ Clicar no botão Pesquisar
     Wait until element is visible       css:span[title="Resultados para "]
     Element Text Should Be    //*[@id="__next"]/div/main/section[4]/div[1]/div/h1    ${PESQUISA}
 
-Conferir se o produto "${PESQUISA}" foi listado no site
+# Conferir se o produto "${PESQUISA}" foi listado no site
