@@ -3,11 +3,11 @@ Library  SeleniumLibrary
 
 *** Variables ***
 ${BROWSER}            chrome
-${URL}                https://www.google.com
-${CAMPO_PESQUISA}     css:input[name="q"]
-${BUTTOM_SEARCH}      name=btnK
-${TITLE_PAGE}         Google
-${TITLE_PAGE_SARCH}   Atlético MG - Pesquisa Google
+${URL}                https://www.magazineluiza.com.br/
+${CAMPO_PESQUISA}     id=input-search
+${BUTTOM_SEARCH}      css:svg[data-testid="search-submit"]
+${TITLE_PAGE}         Magazine Luiza | Pra você é Magalu!
+
 *** Keywords ***
 Abrir navegador
     Open Browser     about:blank     ${BROWSER}
@@ -26,7 +26,8 @@ Digitar o nome "${PESQUISA}" a ser pesquisado
 
 Clicar no botão Pesquisar
     Wait until element is visible       ${BUTTOM_SEARCH}
-    Click Button                        ${BUTTOM_SEARCH}
-    Title Should Be                     ${TITLE_PAGE_SARCH}
+    Click Element                       ${BUTTOM_SEARCH}
+    Wait until element is visible       css:span[title="Resultados para "]
+    Element Text Should Be    //*[@id="__next"]/div/main/section[4]/div[1]/div/h1    ${PESQUISA}
     # Submit form
     # Title Should Be    ${PESQUISA} - Pesquisa Googdle
