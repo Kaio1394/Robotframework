@@ -1,92 +1,92 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 4.1.3 (Python 3.7.4 on win32)" generated="20220128 10:51:12.331" rpa="false" schemaversion="2">
+<robot generator="Robot 4.1.3 (Python 3.7.4 on win32)" generated="20220128 11:36:55.339" rpa="false" schemaversion="2">
 <suite id="s1" name="TestSitePractice" source="C:\Users\Usuario\Documents\Robotframework\tests\TestSitePractice.robot">
-<test id="s1-t1" name="Caso de teste 01: Pesquisar produtos existentes">
+<test id="s1-t1" name="Pesquisar produtos existentes">
 <kw name="Abrir navegador" library="Resource" type="SETUP">
 <kw name="Open Browser" library="SeleniumLibrary">
 <arg>about:blank</arg>
 <arg>${BROWSER}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20220128 10:51:12.556" level="INFO">Opening browser 'chrome' to base url 'about:blank'.</msg>
-<status status="PASS" starttime="20220128 10:51:12.556" endtime="20220128 10:51:13.731"/>
+<msg timestamp="20220128 11:36:55.558" level="INFO">Opening browser 'chrome' to base url 'about:blank'.</msg>
+<status status="PASS" starttime="20220128 11:36:55.558" endtime="20220128 11:36:56.750"/>
 </kw>
-<status status="PASS" starttime="20220128 10:51:12.555" endtime="20220128 10:51:13.731"/>
-</kw>
-<kw name="Acessar a página home do site" library="Resource">
 <kw name="Go To" library="SeleniumLibrary">
 <arg>${URL}</arg>
 <doc>Navigates the current browser window to the provided ``url``.</doc>
-<msg timestamp="20220128 10:51:13.732" level="INFO">Opening url 'https://www.magazineluiza.com.br/'</msg>
-<status status="PASS" starttime="20220128 10:51:13.732" endtime="20220128 10:51:16.589"/>
+<msg timestamp="20220128 11:36:56.750" level="INFO">Opening url 'https://www.magazineluiza.com.br/'</msg>
+<status status="PASS" starttime="20220128 11:36:56.750" endtime="20220128 11:36:59.724"/>
 </kw>
+<status status="PASS" starttime="20220128 11:36:55.557" endtime="20220128 11:36:59.724"/>
+</kw>
+<kw name="Acessar a página home do site" library="Resource">
 <kw name="Title Should Be" library="SeleniumLibrary">
 <arg>${TITLE_PAGE}</arg>
 <doc>Verifies that the current page title equals ``title``.</doc>
-<msg timestamp="20220128 10:51:16.600" level="INFO">Page title is 'Magazine Luiza | Pra você é Magalu!'.</msg>
-<status status="PASS" starttime="20220128 10:51:16.590" endtime="20220128 10:51:16.600"/>
+<msg timestamp="20220128 11:36:59.731" level="INFO">Page title is 'Magazine Luiza | Pra você é Magalu!'.</msg>
+<status status="PASS" starttime="20220128 11:36:59.724" endtime="20220128 11:36:59.731"/>
 </kw>
-<status status="PASS" starttime="20220128 10:51:13.732" endtime="20220128 10:51:16.600"/>
+<status status="PASS" starttime="20220128 11:36:59.724" endtime="20220128 11:36:59.731"/>
 </kw>
 <kw name="Digitar o nome &quot;${PESQUISA}&quot; a ser pesquisado" library="Resource" sourcename="Digitar o nome &quot;${PESQUISA}&quot; a ser pesquisado">
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
 <arg>${CAMPO_PESQUISA}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20220128 10:51:16.601" endtime="20220128 10:51:16.630"/>
+<status status="PASS" starttime="20220128 11:36:59.732" endtime="20220128 11:36:59.764"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>${CAMPO_PESQUISA}</arg>
 <arg>${PESQUISA}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220128 10:51:16.631" level="INFO">Typing text 'PS4' into text field 'id=input-search'.</msg>
-<status status="PASS" starttime="20220128 10:51:16.630" endtime="20220128 10:51:16.744"/>
+<msg timestamp="20220128 11:36:59.765" level="INFO">Typing text 'PS4' into text field 'id=input-search'.</msg>
+<status status="PASS" starttime="20220128 11:36:59.764" endtime="20220128 11:36:59.878"/>
 </kw>
-<status status="PASS" starttime="20220128 10:51:16.601" endtime="20220128 10:51:16.745"/>
+<status status="PASS" starttime="20220128 11:36:59.731" endtime="20220128 11:36:59.878"/>
 </kw>
 <kw name="Clicar no botão Pesquisar" library="Resource">
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
 <arg>${BUTTOM_SEARCH}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20220128 10:51:16.747" endtime="20220128 10:51:16.776"/>
+<status status="PASS" starttime="20220128 11:36:59.880" endtime="20220128 11:36:59.921"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>${BUTTOM_SEARCH}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220128 10:51:16.778" level="INFO">Clicking element 'css:svg[data-testid="search-submit"]'.</msg>
-<status status="PASS" starttime="20220128 10:51:16.778" endtime="20220128 10:51:16.964"/>
+<msg timestamp="20220128 11:36:59.922" level="INFO">Clicking element 'css:svg[data-testid="search-submit"]'.</msg>
+<status status="PASS" starttime="20220128 11:36:59.921" endtime="20220128 11:37:00.119"/>
 </kw>
-<status status="PASS" starttime="20220128 10:51:16.746" endtime="20220128 10:51:16.964"/>
+<status status="PASS" starttime="20220128 11:36:59.880" endtime="20220128 11:37:00.119"/>
 </kw>
 <kw name="Conferir se o produto &quot;${PESQUISA}&quot; foi listado no site" library="Resource" sourcename="Conferir se o produto &quot;${PESQUISA}&quot; foi listado no site">
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
 <arg>${TEXTO_ESPERA}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20220128 10:51:16.966" endtime="20220128 10:51:18.174"/>
+<status status="PASS" starttime="20220128 11:37:00.121" endtime="20220128 11:37:01.530"/>
 </kw>
 <kw name="Element Text Should Be" library="SeleniumLibrary">
 <arg>${TEXTO_PRODUTO}</arg>
 <arg>${PESQUISA}</arg>
 <doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
-<msg timestamp="20220128 10:51:18.174" level="INFO">Verifying element '//*[@id="__next"]/div/main/section[4]/div[1]/div/h1' contains exact text 'PS4'.</msg>
-<status status="PASS" starttime="20220128 10:51:18.174" endtime="20220128 10:51:18.221"/>
+<msg timestamp="20220128 11:37:01.531" level="INFO">Verifying element '//*[@id="__next"]/div/main/section[4]/div[1]/div/h1' contains exact text 'PS4'.</msg>
+<status status="PASS" starttime="20220128 11:37:01.530" endtime="20220128 11:37:01.592"/>
 </kw>
 <kw name="Page Should Contain Image" library="SeleniumLibrary">
 <arg>${XPATH_PRODUTO}</arg>
 <doc>Verifies image identified by ``locator`` is found from current page.</doc>
-<msg timestamp="20220128 10:51:18.284" level="INFO">Current page contains image '//*[@id="__next"]//*[@src="https://a-static.mlcdn.com.br/280x210/snowrunner-ps4-sony/bluewavesgame/31052027/b852dbe6e22f99b3f3ec93116953ce5b.jpg"]'.</msg>
-<status status="PASS" starttime="20220128 10:51:18.222" endtime="20220128 10:51:18.285"/>
+<msg timestamp="20220128 11:37:01.844" level="INFO">Current page contains image '//*[@id="__next"]//*[@src="https://a-static.mlcdn.com.br/280x210/snowrunner-ps4-sony/bluewavesgame/31052027/b852dbe6e22f99b3f3ec93116953ce5b.jpg"]'.</msg>
+<status status="PASS" starttime="20220128 11:37:01.593" endtime="20220128 11:37:01.844"/>
 </kw>
-<status status="PASS" starttime="20220128 10:51:16.965" endtime="20220128 10:51:18.285"/>
+<status status="PASS" starttime="20220128 11:37:00.120" endtime="20220128 11:37:01.845"/>
 </kw>
 <kw name="Fechar navegador" library="Resource" type="TEARDOWN">
 <kw name="Close Browser" library="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20220128 10:51:18.286" endtime="20220128 10:51:20.526"/>
+<status status="PASS" starttime="20220128 11:37:01.846" endtime="20220128 11:37:04.097"/>
 </kw>
-<status status="PASS" starttime="20220128 10:51:18.285" endtime="20220128 10:51:20.528"/>
+<status status="PASS" starttime="20220128 11:37:01.845" endtime="20220128 11:37:04.098"/>
 </kw>
-<status status="PASS" starttime="20220128 10:51:12.555" endtime="20220128 10:51:20.529"/>
+<status status="PASS" starttime="20220128 11:36:55.556" endtime="20220128 11:37:04.100"/>
 </test>
-<status status="PASS" starttime="20220128 10:51:12.333" endtime="20220128 10:51:20.534"/>
+<status status="PASS" starttime="20220128 11:36:55.341" endtime="20220128 11:37:04.107"/>
 </suite>
 <statistics>
 <total>

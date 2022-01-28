@@ -1,1 +1,6 @@
 results/*.html
+results/*.xml
+results/*.png
+*.html
+*.xml
+*.png

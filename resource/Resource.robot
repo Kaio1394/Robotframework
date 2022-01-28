@@ -14,6 +14,7 @@ ${XPATH_PRODUTO}      //*[@id="__next"]//*[@src="https://a-static.mlcdn.com.br/2
 *** Keywords ***
 Abrir navegador
     Open Browser     about:blank        ${BROWSER}
+    Go To                               ${URL}
 
 Fechar navegador
     Close Browser
@@ -21,7 +22,6 @@ Fechar navegador
 #### Passo-a-Passo
 # Caso 01:
 Acessar a página home do site
-    Go To                               ${URL}
     Title Should Be                     ${TITLE_PAGE}
 
 Digitar o nome "${PESQUISA}" a ser pesquisado
@@ -36,4 +36,10 @@ Conferir se o produto "${PESQUISA}" foi listado no site
     Wait until element is visible       ${TEXTO_ESPERA}
     Element Text Should Be              ${TEXTO_PRODUTO}    ${PESQUISA}
     Page Should Contain Image           ${XPATH_PRODUTO}
+
 # Caso 02:
+# Acessar a página home do site
+#     Title Should Be                     ${TITLE_PAGE}
+# Digitar o nome do produto "ItemNãoExistente" no campo de pesquisa
+# Clicar no botão Pesquisar
+# Conferir mensagem de erro "No results were found for your search "ItemNãoExistente""

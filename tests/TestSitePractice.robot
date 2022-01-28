@@ -2,20 +2,23 @@
 Resource        ../resource/Resource.robot
 Test Setup      Abrir navegador
 Test TearDown   Fechar navegador
+
 *** Variables ***
-${PESQUISA}     PS4
+${PESQUISA}                  PS4
+${PESQUISA_DADO_INVALIDO}    ItemNãoExistente
+${MENSAGEM_ERRO}             No results were found for your search "${PESQUISA_DADO_INVALIDO}"
 
 *** Test Case ***
-Caso de teste 01: Pesquisar produtos existentes
+Pesquisar produtos existentes
     Acessar a página home do site
     Digitar o nome "${PESQUISA}" a ser pesquisado
     Clicar no botão Pesquisar
     Conferir se o produto "${PESQUISA}" foi listado no site
-#
-# Caso de teste 02: Pesquisar produtos não existentes
-#     Acessar a página home do site
-#     Digitar o nome do produto "ItemNãoExistente" no campo de pesquisa
+
+# Pesquisar produtos inexistentes
+    # Acessar a página home do site
+    # Digitar o nome do produto "${PESQUISA_DADO_INVALIDO}" no campo de pesquisa
 #     Clicar no botão Pesquisar
-#     Conferir mensagem de erro "No results were found for your search "ItemNãoExistente""
+#     Conferir mensagem de erro "${MENSAGEM_ERRO}"
 
 *** Keywords ***
