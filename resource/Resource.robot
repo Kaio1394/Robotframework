@@ -44,4 +44,8 @@ Digitar o nome do produto "${PESQUISA_DADO_INVALIDO}" no campo de pesquisa
 Clicar no botão Pesquisar.
     Wait until element is visible       ${BUTTOM_SEARCH}
     Click Element                       ${BUTTOM_SEARCH}
-# Conferir mensagem de erro "No results were found for your search "ItemNãoExistente""
+    Sleep    5s
+
+Conferir mensagem de erro "${MENSAGEM_ERRO}"
+    Wait Until Element Is Visible    //*[@id="__next"]//*[@data-testid="text-list-title"]
+    Page Should Contain    ${MENSAGEM_ERRO}

@@ -6,7 +6,7 @@ Test TearDown   Fechar navegador
 *** Variables ***
 ${PESQUISA}                  PS4
 ${PESQUISA_DADO_INVALIDO}    ItemNãoExistente
-${MENSAGEM_ERRO}             No results were found for your search "${PESQUISA_DADO_INVALIDO}"
+${MENSAGEM_ERRO}             Sua busca por "${PESQUISA_DADO_INVALIDO}" não encontrou resultado algum :
 
 *** Test Case ***
 Pesquisar produtos existentes
@@ -17,6 +17,6 @@ Pesquisar produtos existentes
 Pesquisar produtos inexistentes
     Digitar o nome do produto "${PESQUISA_DADO_INVALIDO}" no campo de pesquisa
     Clicar no botão Pesquisar.
-#     Conferir mensagem de erro "${MENSAGEM_ERRO}"
+    Conferir mensagem de erro "${MENSAGEM_ERRO}"
 
 *** Keywords ***
