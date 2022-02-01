@@ -4,7 +4,7 @@ Test Setup      Abrir navegador
 Test TearDown   Fechar navegador
 
 *** Variables ***
-${PESQUISA}                  PS4
+${PESQUISA}                  ps4
 ${PESQUISA_DADO_INVALIDO}    ItemNãoExistente
 ${MENSAGEM_ERRO}             Sua busca por "${PESQUISA_DADO_INVALIDO}" não encontrou resultado algum :
 
