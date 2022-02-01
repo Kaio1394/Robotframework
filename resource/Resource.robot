@@ -2,15 +2,15 @@
 Library  SeleniumLibrary
 
 *** Variables ***
-${BROWSER}            chrome
-${URL}                https://www.magazineluiza.com.br/
-${CAMPO_PESQUISA}     id=input-search
-${BUTTOM_SEARCH}      css:svg[data-testid="search-submit"]
-${TITLE_PAGE}         Magazine Luiza | Pra você é Magalu!
-${TEXTO_ESPERA}       css:span[title="Resultados para "]
-${TEXTO_PRODUTO}      //*[@id="__next"]/div/main/section[4]/div[1]/div/h1
-${XPATH_PRODUTO}      //*[@id="__next"]//*[@src="https://a-static.mlcdn.com.br/280x210/snowrunner-ps4-sony/bluewavesgame/31052027/b852dbe6e22f99b3f3ec93116953ce5b.jpg"]
-
+${BROWSER}               chrome
+${URL}                   https://www.magazineluiza.com.br/
+${CAMPO_PESQUISA}        id=input-search
+${BUTTOM_SEARCH}         css:svg[data-testid="search-submit"]
+${TITLE_PAGE}            Magazine Luiza | Pra você é Magalu!
+${TEXTO_ESPERA}          css:span[title="Resultados para "]
+${TEXTO_PRODUTO}         //*[@id="__next"]/div/main/section[4]/div[1]/div/h1
+${XPATH_PRODUTO}         //*[@id="__next"]//*[@src="https://a-static.mlcdn.com.br/280x210/snowrunner-ps4-sony/bluewavesgame/31052027/b852dbe6e22f99b3f3ec93116953ce5b.jpg"]
+${FRASE_VISIVEL_PAGINA}  //*[@id="__next"]//*[@data-testid="text-list-title"]
 *** Keywords ***
 Abrir navegador
     Open Browser     about:blank        ${BROWSER}
@@ -47,5 +47,5 @@ Clicar no botão Pesquisar.
     Sleep    5s
 
 Conferir mensagem de erro "${MENSAGEM_ERRO}"
-    Wait Until Element Is Visible    //*[@id="__next"]//*[@data-testid="text-list-title"]
+    Wait Until Element Is Visible    ${FRASE_VISIVEL_PAGINA}
     Page Should Contain    ${MENSAGEM_ERRO}
