@@ -39,7 +39,7 @@ Conferir se o produto "${PESQUISA}" foi listado no site
 # Caso 02:
 Digitar o nome do produto "${PESQUISA_DADO_INVALIDO}" no campo de pesquisa
     Wait until element is visible       ${CAMPO_PESQUISA}
-    Input Text    ${CAMPO_PESQUISA}     ${PESQUISA_DADO_INVALIDO}
+    Input Text                          ${CAMPO_PESQUISA}     ${PESQUISA_DADO_INVALIDO}
 
 Clicar no botão Pesquisar.
     Wait until element is visible       ${BUTTOM_SEARCH}
