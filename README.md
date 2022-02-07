@@ -33,3 +33,13 @@ Cenário 02: Pesquisar produtos não existentes
     Quando eu pesquisar pelo produto "ItemNãoExistente"
     Então a página deve exibir uma mensagem de erro "No results were found for your search "ItemNãoExistente""
 ```
+
+### Execução do script
+
+Para executar o código basta abrir o terminal da IDE, no caso do Atom, terá que adicionar um pacote do terminal.
+
+Para a instalação de pacotes via terminal, basta dar o comando: ``` apm install nome-do-pacote```.
+
+E para pesquisar alguma pacote existente: ``` apm search nome-do-pacote```.
+
+E por fim, executando o código: ```robot -d .\results -L trace tests\TestSitePractice.robot```. O "-d .\nome-da-pasta" funciona para direcionar os arquivos de log e report, por default os arquivos são direcionados para a pasta raiz. Já o "-L trace" traz mais detalhes para o report.
