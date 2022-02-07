@@ -10,11 +10,13 @@ ${MENSAGEM_ERRO}             Sua busca por "${PESQUISA_DADO_INVALIDO}" não enco
 
 *** Test Case ***
 Pesquisar produtos existentes
+    Acessar página home do site
     Digitar o nome "${PESQUISA}" a ser pesquisado
     Clicar no botão Pesquisar
     Conferir se o produto "${PESQUISA}" foi listado no site
 
 Pesquisar produtos inexistentes
+    Acessar página home do site
     Digitar o nome do produto "${PESQUISA_DADO_INVALIDO}" no campo de pesquisa
     Clicar no botão Pesquisar.
     Conferir mensagem de erro "${MENSAGEM_ERRO}"

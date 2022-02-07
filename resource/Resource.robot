@@ -14,14 +14,15 @@ ${FRASE_VISIVEL_PAGINA}  //*[@id="__next"]//*[@data-testid="text-list-title"]
 *** Keywords ***
 Abrir navegador
     Open Browser     about:blank        ${BROWSER}
-    Go To                               ${URL}
-    Title Should Be                     ${TITLE_PAGE}
 
 Fechar navegador
     Close Browser
 
 #### Passo-a-Passo
 # Caso 01:
+Acessar página home do site
+    Go To                               ${URL}
+    Title Should Be                     ${TITLE_PAGE}
 
 Digitar o nome "${PESQUISA}" a ser pesquisado
     Wait until element is visible       ${CAMPO_PESQUISA}
