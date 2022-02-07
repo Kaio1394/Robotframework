@@ -9,7 +9,7 @@ Referências de estudos:
 Foi utlizado o modelo procedural e Gherkin para a escrita dos cenários de testes.
 
 ### Procedural:
-```
+``` Gherkin
 Pesquisar produtos existentes
     Digitar o nome "${PESQUISA}" a ser pesquisado
     Clicar no botão Pesquisar
@@ -22,7 +22,7 @@ Pesquisar produtos inexistentes
 ```
 
 ### Gherkin:
-```
+```Gherkin
 Cenário 01: Pesquisar produtos existentes
     Dado que eu estou na página home do site
     Quando eu pesquisar pelo produto "Blouse"
@@ -42,4 +42,10 @@ Para a instalação de pacotes via terminal, basta dar o comando: ``` apm instal
 
 E para pesquisar alguma pacote existente: ``` apm search nome-do-pacote```.
 
-E por fim, executando o código: ```robot -d .\results -L trace tests\TestSitePractice.robot```. O "-d .\nome-da-pasta" funciona para direcionar os arquivos de log e report, por default os arquivos são direcionados para a pasta raiz. Já o "-L trace" traz mais detalhes para o report.
+E por fim, executando o código: ```robot -d .\results -L trace tests\TestSitePractice.robot```. O ```-d .\nome-da-pasta``` funciona para direcionar os arquivos de log e report, por default os arquivos são direcionados para a pasta raiz. Já o ```-L trace``` traz mais detalhes para o report.
+
+
+### Modelo report:
+
+![image](https://user-images.githubusercontent.com/62676087/152852569-0a693d28-b742-4c6b-ae80-b08742662ffb.png)
+
